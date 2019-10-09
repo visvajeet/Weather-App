@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        tools:layout="@layout/home_fragment"
+        android:id="@+id/homeFragment"
+        android:name="com.test.weather.ui.HomeFragment"
+        android:label="Home" >
+        <action
+            android:id="@+id/action_homeFragment_to_cityInputFragment"
+            app:destination="@id/cityInputFragment" />
+    </fragment>
+
+    <fragment
+        tools:layout="@layout/city_input_fragment"
+        android:id="@+id/cityInputFragment"
+        android:name="com.test.weather.ui.CityInputFragment"
+        android:label="CityInputFragment" >
+        <action
+            android:id="@+id/action_cityInputFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true" >
+        </action>
+    </fragment>
+</navigation>

@@ -27,7 +27,7 @@ class WeatherViewModel(application: Application) : AndroidViewModel(application)
 
       private val _status = MutableLiveData<Status>()
       val status : LiveData<Status> = _status
-      val app = application
+      val app = application 
 
 
     private val database = getDatabase(application)
